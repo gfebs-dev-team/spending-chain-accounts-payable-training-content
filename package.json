@@ -1,0 +1,37 @@
+{
+  "name": "gfebs-training-content",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "test": "vite --host && npx mocha --no-timeouts src/__test__ --require chai/register-assert.js",
+    "auto": "vite --host && npx mocha --no-timeouts src/views/__test__/auto.js"
+  },
+  "dependencies": {
+    "@remixicon/vue": "^4.2.0",
+    "@vueuse/core": "^10.10.0",
+    "dayjs": "^1.11.11",
+    "eslint": "^9.0.0",
+    "generate-index": "^4.1.1",
+    "pinia": "^2.1.7",
+    "sass": "^1.74.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-fluid-type": "^2.0.6",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwind-scrollbar": "^3.1.0",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.2.0",
+    "vite-aliases": "^0.11.6"
+  }
+}
