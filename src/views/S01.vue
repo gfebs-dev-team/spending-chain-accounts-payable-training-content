@@ -1,12 +1,12 @@
 <script setup>
 import { SlideColumns } from '@/components/Slide'
-import { useSlidesStore } from '../stores/slides'
+import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
 
 const slideData = {
-  title: 'SlideColumns',
+  title: 'Welcome to Accounts Payable',
   type: 'content',
-  section: 'Section 1: Slide Types'
+  section: 'Introduction'
 }
 
 const slides = useSlidesStore()
@@ -34,14 +34,3 @@ onBeforeMount(() => {
     <template #column_2></template>
   </SlideColumns>
 </template>
-
-<style scoped lang="scss">
-code {
-  background-color: #1a1818;
-  word-wrap: break-word;
-  box-decoration-break: clone;
-  padding: 0.1rem 0.3rem 0.2rem;
-  border-radius: 0.2rem;
-  font-family: Consolas, Monaco, 'Lucida Sans', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-</style>
