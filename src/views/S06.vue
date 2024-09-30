@@ -7,7 +7,7 @@ import target from '@/assets/img/target.svg'
 const slideData = {
   title: 'Groups of Invoices',
   type: 'content',
-  section: 'Invoice Processing'
+  section: 'Invoice Process'
 }
 
 const slides = useSlidesStore()
@@ -41,11 +41,11 @@ onBeforeMount(() => {
         :src="target"
         alt="Non-PPA"
         @click="active = 1"
-        :class="active == 1 ? 'drop-shadow-xl drop-shadow-masblue' : ''"
+        :class="active == 1 ? 'drop-shadow-md drop-shadow-masblue' : ''"
       />
     </div>
     <template #column_2>
-      <div v-if="active > -1" class="bg-spacecadet">
+      <div v-if="active > -1" class="bg-spacecadet mx-4">
         <div v-if="active == 0" class="flex flex-col gap-3 p-4">
           <p class="font-bold">PPA Key Points:</p>
           <ul class="list-disc pl-4">
@@ -90,8 +90,8 @@ onBeforeMount(() => {
 
 <style lang="postcss" scoped>
 .drop-shadow-md {
-  --tw-drop-shadow: drop-shadow(0 0 3px rgb(0 0 0 / 0.04));
-  --tw-drop-shadow-colored: drop-shadow(0 0 3px var(--tw-drop-shadow-color));
+  --tw-drop-shadow: drop-shadow(0 0 5px rgb(0 0 0 / 0.04));
+  --tw-drop-shadow-colored: drop-shadow(0 0 5px var(--tw-drop-shadow-color));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
     var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
