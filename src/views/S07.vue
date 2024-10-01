@@ -18,7 +18,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideTerms v-bind="slideData" :termsNum="2">
+  <SlideTerms v-bind="slideData" :termsNum="2" :reverse="true">
     <template #main-text>
       <p>
         There are two key steps you should understand in the processing of contractual invoices:
