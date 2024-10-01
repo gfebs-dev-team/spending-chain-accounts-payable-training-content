@@ -6,7 +6,7 @@ import { SlideTerms } from '@/components/Slide'
 const slideData = {
   title: 'Invoicing Roles in GFEBS',
   type: 'content',
-  section: 'Invoice Process'
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()

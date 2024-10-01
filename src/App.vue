@@ -9,8 +9,8 @@ import { storeToRefs } from 'pinia'
 
 const courseData = {
   courseCode: ' ',
-  courseTitle: 'Training Content Template',
-  topic: 'Demo'
+  courseTitle: 'Spending Chain',
+  topic: 'Accounts Payable'
 }
 
 const slides = useSlidesStore()

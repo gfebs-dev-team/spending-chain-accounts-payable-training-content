@@ -6,7 +6,7 @@ import { SlideTerms } from '@/components/Slide'
 const slideData = {
   title: 'Contractual Invoices',
   type: 'content',
-  section: 'Invoice Process'
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()

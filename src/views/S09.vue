@@ -7,7 +7,7 @@ import chart from '@/assets/img/demonstration.svg'
 const slideData = {
   title: 'MIR4 Display Contract Invoice: Sim',
   type: 'content',
-  section: 'Invoice Process'
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()

@@ -7,7 +7,7 @@ import chart from '@/assets/img/demonstration.svg'
 const slideData = {
   title: 'FB60 Misc. Pay Invoice: Demo',
   type: 'content',
-  section: 'Invoice Process'
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()

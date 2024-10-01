@@ -41,7 +41,6 @@ import S39 from './S39.vue'
 import S40 from './S40.vue'
 import S41 from './S41.vue'
 import S42 from './S42.vue'
-import S43 from './S43.vue'
 //@endindex
 export default {
   //@index('./*.vue', f=> `${f.name},`)
@@ -86,8 +85,7 @@ export default {
   S39,
   S40,
   S41,
-  S42,
-  S43
+  S42
   //@endindex
 }
 

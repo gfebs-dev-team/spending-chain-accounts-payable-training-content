@@ -7,7 +7,7 @@ import target from '@/assets/img/target.svg'
 const slideData = {
   title: 'Types of Invoices',
   type: 'content',
-  section: 'Invoice Process'
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()

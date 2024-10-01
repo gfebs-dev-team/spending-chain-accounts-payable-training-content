@@ -5,9 +5,9 @@ import { onBeforeMount } from 'vue'
 import chart from '@/assets/img/demonstration.svg'
 
 const slideData = {
-  title: 'FB60 Misc. Pay Invoice: Sim',
+  title: 'MIRO Create Invoice: Sim',
   type: 'content',
-  section: 'Invoice Process'
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()

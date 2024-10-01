@@ -30,10 +30,10 @@ onBeforeMount(() => {
   <SlideQuestion :title="slideData.title">
     <template #question>What is the answer to this question?</template>
     <template #options>
-      <SlideQuestionInput value="first" label="first" index="1" count="1" />
-      <SlideQuestionInput value="second" label="second" index="2" count="1" />
-      <SlideQuestionInput value="third" label="third" index="3" count="1" />
-      <SlideQuestionInput value="fourth" label="fourth" index="4" count="1" />
+      <SlideQuestionInput value="first" label="first" index="1" count="99" />
+      <SlideQuestionInput value="second" label="second" index="2" count="99" />
+      <SlideQuestionInput value="third" label="third" index="3" count="99" />
+      <SlideQuestionInput value="fourth" label="fourth" index="4" count="99" />
     </template>
   </SlideQuestion>
 </template>
