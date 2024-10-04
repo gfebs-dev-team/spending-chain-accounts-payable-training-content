@@ -31,7 +31,7 @@ onBeforeMount(() => {
     <p><span class="bold">Transaction Code: MIR4</span></p>
     <p><span class="font-bold">Click</span> the icon on the right to begin.</p>
     <template #column_2>
-      <a href=""><img :src="chart" className="h-full p-12" /></a>
+      <a href=""><img :src="chart" className="h-full px-12" /></a>
     </template>
   </SlideColumns>
 </template>

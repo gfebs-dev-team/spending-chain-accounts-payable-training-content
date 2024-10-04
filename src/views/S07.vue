@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import chart from '@/assets/img/accounts8.svg'
 
 const slideData = {
   title: 'Pre-Validation',
@@ -29,7 +29,7 @@ onBeforeMount(() => {
       Pre-Validation Module (APVM) and the Pay Pre-Validation Module (PPVM).
     </p>
     <template #column_2>
-      <a href=""><img :src="chart" className="h-full p-12" /></a>
+      <img :src="chart" className="h-full px-12" />
     </template>
   </SlideColumns>
 </template>

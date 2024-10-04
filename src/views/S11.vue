@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import chart from '@/assets/img/accounts9.svg'
 
 const slideData = {
   title: 'Miscellaneous Payment Invoices',
@@ -43,7 +43,7 @@ onBeforeMount(() => {
       Vendor's Master Data.
     </p>
     <template #column_2>
-      <img :src="chart" className="h-full p-12" />
+      <img :src="chart" className="self-start px-16" />
     </template>
   </SlideColumns>
 </template>

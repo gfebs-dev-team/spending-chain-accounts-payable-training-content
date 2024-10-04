@@ -2,6 +2,7 @@
 import { onBeforeMount } from 'vue'
 import { useSlidesStore } from '@/stores/slides'
 import { SlideTerms } from '@/components/Slide'
+import invoiceProcessor from '@/assets/img/accounts3.svg'
 
 const slideData = {
   title: 'Invoicing Roles in GFEBS',
@@ -30,6 +31,8 @@ onBeforeMount(() => {
         <span class="font-bold">Click</span> on each role to learn more about the responsibilities
         for each role involved in the Invoicing Activity
       </p>
+
+      <img :src="invoiceProcessor" alt="Invoice Processor" class="w-2/3 p-4 mx-auto" />
     </template>
 
     <template #termButton_1>Site Invoice Processor</template>

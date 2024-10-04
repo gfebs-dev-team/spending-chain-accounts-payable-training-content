@@ -2,7 +2,8 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount, ref } from 'vue'
-import target from '@/assets/img/target.svg'
+import ppa from '@/assets/s06/ppa.svg'
+import nonPPA from '@/assets/s06/non-ppa.svg'
 
 const slideData = {
   title: 'Groups of Invoices',
@@ -32,14 +33,16 @@ onBeforeMount(() => {
     </p>
     <div class="grid grid-cols-2 gap-3 mt-6">
       <img
-        :src="target"
+        :src="ppa"
         alt="PPA"
+        class="p-8"
         @click="active = 0"
         :class="active == 0 ? 'drop-shadow-md drop-shadow-masblue' : ''"
       />
       <img
-        :src="target"
+        :src="nonPPA"
         alt="Non-PPA"
+        class="p-8"
         @click="active = 1"
         :class="active == 1 ? 'drop-shadow-md drop-shadow-masblue' : ''"
       />
@@ -90,14 +93,14 @@ onBeforeMount(() => {
 
 <style lang="postcss" scoped>
 .drop-shadow-md {
-  --tw-drop-shadow: drop-shadow(0 0 5px rgb(0 0 0 / 0.04));
-  --tw-drop-shadow-colored: drop-shadow(0 0 5px var(--tw-drop-shadow-color));
+  --tw-drop-shadow: drop-shadow(0 0 6px rgb(0 0 0 / 0.04));
+  --tw-drop-shadow-colored: drop-shadow(0 0 6px var(--tw-drop-shadow-color));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
     var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-masblue {
-  --tw-drop-shadow-color: #3a4b6f;
+  --tw-drop-shadow-color: #bbbbbb;
   --tw-drop-shadow: var(--tw-drop-shadow-colored);
 }
 </style>

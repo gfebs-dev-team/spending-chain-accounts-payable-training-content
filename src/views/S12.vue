@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import chart from '@/assets/img/accounts10.svg'
 
 const slideData = {
   title: 'Posting Misc. Payment Invoices (1 of 2)',
@@ -41,7 +41,7 @@ onBeforeMount(() => {
       route to DFAS for Payment Processing.
     </p>
     <template #column_2>
-      <img :src="chart" className="h-full p-12" />
+      <img :src="chart" className="self-start px-4" />
     </template>
   </SlideColumns>
 </template>

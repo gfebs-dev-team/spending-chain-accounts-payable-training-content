@@ -2,7 +2,8 @@
 import { SlideBase } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount, ref } from 'vue'
-import target from '@/assets/img/target.svg'
+import ppa from '@/assets/s06/ppa.svg'
+import nonPPA from '@/assets/s06/non-ppa.svg'
 
 const slideData = {
   title: 'Posting Misc. Payment Invoices (2 of 2)',
@@ -29,14 +30,14 @@ onBeforeMount(() => {
 
       <div class="grid grid-cols-2 grid-rows-2 h-full gap-6 p-6 justify-items-center w-4/5">
         <img
-          :src="target"
+          :src="ppa"
           alt="PPA"
           class="h-full"
           @click="active = 0"
           :class="active == 0 ? 'drop-shadow-md drop-shadow-masblue' : ''"
         />
         <img
-          :src="target"
+          :src="nonPPA"
           alt="Non-PPA"
           class="h-full"
           @click="active = 1"
@@ -67,3 +68,17 @@ onBeforeMount(() => {
     </template>
   </SlideBase>
 </template>
+
+<style lang="postcss" scoped>
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 0 6px rgb(0 0 0 / 0.04));
+  --tw-drop-shadow-colored: drop-shadow(0 0 6px var(--tw-drop-shadow-color));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale)
+    var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-masblue {
+  --tw-drop-shadow-color: #bbbbbb;
+  --tw-drop-shadow: var(--tw-drop-shadow-colored);
+}
+</style>

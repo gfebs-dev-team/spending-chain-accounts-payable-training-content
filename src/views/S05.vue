@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import target from '@/assets/img/target.svg'
+import target from '@/assets/img/accounts4.svg'
 
 const slideData = {
   title: 'Types of Invoices',
@@ -19,7 +19,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideColumns v-bind="slideData" :columns="1">
+  <SlideColumns v-bind="slideData" :columns="1" :classNames="{ 2: 'self-start' }">
     <p>
       GFEBS provides us two transaction codes for entering invoices, FB60 and MIRO. Some of these
       invoices interface via a system partner, Wide Area Work Flow (WAWF), while others are manually
@@ -35,7 +35,7 @@ onBeforeMount(() => {
       Invoice Processor at DFAS.
     </p>
     <template #column_2>
-      <img :src="target" alt="target" class="p-8" />
+      <img :src="target" alt="target" class="px-8 w-2/3 mx-auto" />
     </template>
   </SlideColumns>
 </template>

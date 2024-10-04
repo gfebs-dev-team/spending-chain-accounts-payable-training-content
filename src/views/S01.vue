@@ -2,6 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
+import image from '@/assets/img/accounts1.svg'
 
 const slideData = {
   title: 'Welcome to Accounts Payable',
@@ -31,6 +32,8 @@ onBeforeMount(() => {
       <li>Steps involved in the payment process</li>
     </ul>
     <p>We will start by learning about Invoicing and the roles required in the process.</p>
-    <template #column_2></template>
+    <template #column_2>
+      <img :src="image" className="self-start px-12" />
+    </template>
   </SlideColumns>
 </template>
