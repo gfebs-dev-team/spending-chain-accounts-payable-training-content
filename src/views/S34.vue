@@ -1,25 +1,17 @@
 <script setup>
-import { SlideQuestion, SlideQuestionInput } from '@/components/Slide'
-import { useSlidesStore } from '../stores/slides'
-import { onBeforeMount, provide, ref } from 'vue'
+import { SlideCheckpoint } from '@/components/Slide'
+import { useSlidesStore } from '@/stores/slides'
+import { onBeforeMount } from 'vue'
+import checkpoint from '@/assets/img/module_checkpoint.png'
 
 const slideData = {
-  title: 'Question 7',
-  type: 'question',
-  section: 'Payment Program',
-  viewed: false,
-  answer: 'true',
-  user: ''
+  title: 'Learning Checkpoint',
+  type: 'content',
+  section: 'Payment Program'
 }
 
 const slides = useSlidesStore()
 const { addSlide } = slides
-
-const answer = ref()
-const checked_el = ref(0)
-
-provide('answer', answer)
-provide('checked_el', checked_el)
 
 onBeforeMount(() => {
   addSlide(slideData, 33)
@@ -27,14 +19,11 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideQuestion :title="slideData.title">
-    <template #question>
-      Electronic Funds Transfer (EFT) information in the Vendor Master Data is updated via the
-      Corporate Electronic Funds Transfer (CEFT) interface prior to payment.
-    </template>
-    <template #options>
-      <SlideQuestionInput value="true" label="True" index="1" count="7" />
-      <SlideQuestionInput value="false" label="False" index="2" count="7" />
-    </template>
-  </SlideQuestion>
+  <SlideCheckpoint v-bind="slideData" :columns="1" :image="checkpoint">
+    <p>
+      Before we summarize the topics in the Payment Program section, it's important to assess your
+      knowledge of the material covered.
+    </p>
+    <p>Proceed to answer six more questions to test your understanding of the material covered.</p>
+  </SlideCheckpoint>
 </template>

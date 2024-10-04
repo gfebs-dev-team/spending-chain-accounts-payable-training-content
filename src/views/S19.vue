@@ -4,11 +4,11 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 2',
+  title: 'Question 1',
   type: 'question',
   section: 'Invoicing Process',
   viewed: false,
-  answer: 'd',
+  answer: 'true',
   user: ''
 }
 
@@ -28,29 +28,13 @@ onBeforeMount(() => {
 
 <template>
   <SlideQuestion :title="slideData.title">
-    <template #question>
-      Which of the following is not a requirement for routing of a miscellaneous payment invoice:
-    </template>
+    <template #question
+      >A Miscellaneous Payment Invoice that is subject to the Prompt pay Act (PPA) is matched to a
+      Purchase Order and a Goods Receipt / Acceptance.</template
+    >
     <template #options>
-      <SlideQuestionInput value="a" label=" Attach Support Documentation" index="1" count="2" />
-      <SlideQuestionInput
-        value="b"
-        label="Choosing the Correct Document type"
-        index="2"
-        count="2"
-      />
-      <SlideQuestionInput
-        value="c"
-        label="Local Approval from the Misc Pay Approver"
-        index="3"
-        count="2"
-      />
-      <SlideQuestionInput
-        value="d"
-        label="DFAS Approval from the Misc Pay Approver"
-        index="4"
-        count="2"
-      />
+      <SlideQuestionInput value="true" label="True" index="1" count="1" />
+      <SlideQuestionInput value="false" label="False" index="2" count="1" />
     </template>
   </SlideQuestion>
 </template>

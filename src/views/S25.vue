@@ -1,14 +1,13 @@
 <script setup>
-import { SlideSection } from '@/components/Slide'
-import { useSlidesStore } from '../stores/slides'
+import { SlideColumns } from '@/components/Slide'
+import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
+import chart from '@/assets/img/demonstration.svg'
 
 const slideData = {
-  title: 'Payment Program Section III',
-  sectionNum: 'Section III',
-  subtitle: 'Payment Program',
-  section: 'Payment Program',
-  type: 'section'
+  title: 'Summary',
+  type: 'content',
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()
@@ -20,5 +19,19 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideSection v-bind="slideData" />
+  <SlideColumns v-bind="slideData" :columns="1">
+    <p>This concludes the Invoice section.</p>
+    <p>The following are tasks that you should be able to perform:</p>
+
+    <ul class="list-disc pl-8">
+      <li>Describe the steps involved in the Invoice Entry process</li>
+      <li>List the types of invoices that can be entered into GFEBS</li>
+      <li>Describe how miscellaneous invoices differ from contractual invoices</li>
+      <li>List the roles necessary for the invoice entry process to occur</li>
+      <li>Summarize the procedures for processing blocked invoices</li>
+    </ul>
+    <template #column_2>
+      <img :src="chart" className="h-full p-12" />
+    </template>
+  </SlideColumns>
 </template>

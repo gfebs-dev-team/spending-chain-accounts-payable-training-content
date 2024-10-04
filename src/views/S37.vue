@@ -4,7 +4,7 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 10',
+  title: 'Question 9',
   type: 'question',
   section: 'Payment Program',
   viewed: false,
@@ -29,12 +29,12 @@ onBeforeMount(() => {
 <template>
   <SlideQuestion :title="slideData.title">
     <template #question>
-      The Payment Interface Processing Monitor is responsible for monitoring inbound and outbound
-      interfaces.
+      The Automated Disbursing System (ADS) is an extemal payment system which interfaces with GFEBS
+      in the Payment Process:
     </template>
     <template #options>
-      <SlideQuestionInput value="true" label="True" index="1" count="10" />
-      <SlideQuestionInput value="false" label="False" index="2" count="10" />
+      <SlideQuestionInput value="true" label="True" index="1" count="9" />
+      <SlideQuestionInput value="false" label="False" index="2" count="9" />
     </template>
   </SlideQuestion>
 </template>

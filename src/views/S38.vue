@@ -4,11 +4,11 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 11',
+  title: 'Question 10',
   type: 'question',
   section: 'Payment Program',
   viewed: false,
-  answer: 'd',
+  answer: 'true',
   user: ''
 }
 
@@ -28,17 +28,13 @@ onBeforeMount(() => {
 
 <template>
   <SlideQuestion :title="slideData.title">
-    <template #question> Which role is the final authority when processing payments? </template>
+    <template #question>
+      The Payment Interface Processing Monitor is responsible for monitoring inbound and outbound
+      interfaces.
+    </template>
     <template #options>
-      <SlideQuestionInput value="a" label="Payment Processor" index="1" count="11" />
-      <SlideQuestionInput value="b" label="Payment Close Processor" index="2" count="11" />
-      <SlideQuestionInput
-        value="c"
-        label="Payment Interface Processing Monitor"
-        index="3"
-        count="11"
-      />
-      <SlideQuestionInput value="d" label="Payment Certifier" index="4" count="11" />
+      <SlideQuestionInput value="true" label="True" index="1" count="10" />
+      <SlideQuestionInput value="false" label="False" index="2" count="10" />
     </template>
   </SlideQuestion>
 </template>

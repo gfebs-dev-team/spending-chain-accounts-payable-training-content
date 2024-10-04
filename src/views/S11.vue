@@ -5,7 +5,7 @@ import { onBeforeMount } from 'vue'
 import chart from '@/assets/img/demonstration.svg'
 
 const slideData = {
-  title: 'Posting Misc. Payment Invoices (1 of 2)',
+  title: 'Miscellaneous Payment Invoices',
   type: 'content',
   section: 'Invoicing Process'
 }
@@ -21,24 +21,26 @@ onBeforeMount(() => {
 <template>
   <SlideColumns v-bind="slideData" :columns="1">
     <p>
-      The Site Invoice Processor should not process a Misc. Payment Invoice without supporting
-      documentation.
+      As previously mentioned invoices for non-contractual goods / services are identified as
+      miscellaneous payment invoices. These invoices are manually entered by the Site Invoice
+      Processor.
     </p>
     <p>
-      After creating the invoice, they must attach supporting documentation via FB02. This is true
-      regardless of the invoice type that was entered, whether it was an MIRO invoice for Misc Pay
-      subject to PPA or an FB60 for Misc Pay not subject to PPA. Only after the supporting
-      documentation is attached will the invoice route for approval.
+      Invoices for miscellaneous payments that are subject to PPA are similar to contractual
+      invoices in that they are based on an invoice from a vendor and use the MIRO transaction code.
+      The Misc Pay Invoice is identified as such by using a different document type ARM" which
+      identifies it as a Misc Pay PO. The invoice type can be selected from the Details Tab in the
+      Invoice in the field labeled Doc. Type.
     </p>
     <p>
-      It is of upmost importance that the correct document types are used to reflect a miscellaneous
-      payment. Using the wrong document type in any of the documents required will cause an issue
-      with routing.
+      Invoices for miscellaneous payments not subject to PPA must also have all supporting
+      documentation. These payment can be for reimbursements of tuition and / or certifications. The
+      T-code used for this type of miscellaneous payment is FB60. The document type "MP" designated
+      this invoice as a miscellaneous payment invoice.
     </p>
     <p>
-      Once supporting documentation is attached, the Misc. Pay Approver receives a notification
-      advising of their pending tasks. Upon review and approval, the Miscellaneous Payment will
-      route to DFAS for Payment Processing.
+      Miscellaneous payments can be made via check or EFT. The payment method is derived from the
+      Vendor's Master Data.
     </p>
     <template #column_2>
       <img :src="chart" className="h-full p-12" />

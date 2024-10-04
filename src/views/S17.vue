@@ -1,11 +1,11 @@
 <script setup>
-import { SlideCheckpoint } from '@/components/Slide'
+import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import checkpoint from '@/assets/img/module_checkpoint.png'
+import chart from '@/assets/img/demonstration.svg'
 
 const slideData = {
-  title: 'Learning Checkpoint',
+  title: 'MIRO Create Invoice: Sim',
   type: 'content',
   section: 'Invoicing Process'
 }
@@ -19,12 +19,19 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideCheckpoint v-bind="slideData" :columns="1" :image="checkpoint">
+  <SlideColumns v-bind="slideData" :columns="1">
     <p>
-      Before we summarize the topics in the Invoicing section, it's important to check your
-      knowledge of the material covered. This is your opportunity to ensure you are understanding
-      the course material.
+      Now is time to practice executing creating an Invoice via MIRO. You have the opportunity to
+      practice tasks that you will perform in the GFEBS system by completing a scenario. When you
+      open the simulation, you will be provided with instructions to properly execute the
+      transaction.
     </p>
-    <p>Proceed to answer six questions to test your understanding of the material covered.</p>
-  </SlideCheckpoint>
+    <p><span class="font-bold">Role</span>: Site Invoice Processor, Invoice Processor</p>
+    <p><span class="font-bold">Scenario</span>: Create Invoice</p>
+    <p><span class="font-bold">Transaction Code</span>: MIRO</p>
+    <p><span class="font-bold">Click</span> the icon on the right to begin.</p>
+    <template #column_2>
+      <a href=""><img :src="chart" className="h-full p-12" /></a>
+    </template>
+  </SlideColumns>
 </template>

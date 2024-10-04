@@ -69,7 +69,7 @@ function setTerm(index) {
           class="col-span-2 flex items-center justify-center overflow-x-auto overflow-y-hidden divide-x divide-coolgrey divide-opacity-50"
         >
           <button
-            class="font-bold p-2 px-3 capitalize text-nowrap"
+            class="font-bold p-2 px-3 capitalize text-nowrap hover:opacity-70"
             :class="[
               { default: search != '' },
               { 'text-saffron': activeFilter == 'all' && search == '' }
@@ -81,14 +81,14 @@ function setTerm(index) {
 
           <div class="alphabet py-1 flex w-full overflow-x-auto">
             <button
-              class="font-bold p-1 pl-3 capitalize text-nowrap"
+              class="font-bold p-1 pl-3 capitalize text-nowrap hover:opacity-70"
               :class="{ 'text-saffron': activeFilter == '0-9' && search == '' }"
               @click="activeFilter = '0-9'"
             >
               0-9
             </button>
             <button
-              class="font-bold p-1 capitalize"
+              class="font-bold p-1 capitalize hover:opacity-70"
               :class="{ 'text-saffron': activeFilter == letter && search == '' }"
               @click="activeFilter = letter"
               v-for="(letter, index) in limitedAlphabet(glossary)"
@@ -119,12 +119,15 @@ function setTerm(index) {
           >
             <template v-for="(item, index) in glossary" :key="item.term">
               <li
-                :class="{ 'text-saffron font-bold': activeIndex == index }"
+                class="cursor-pointer hover:opacity-70 pb-3"
+                :class="{ 'text-saffron font-bold ': activeIndex == index }"
                 @click="setTerm(index)"
                 v-if="getFilter(item.term)"
               >
                 {{ item.term }}
               </li>
+
+              <hr class="pb-3" v-if="getFilter(item.term)" />
             </template>
           </div>
         </div>
@@ -145,7 +148,9 @@ function setTerm(index) {
               {{ glossary[activeIndex].term }}
             </h3>
 
-            <p :key="activeIndex">{{ glossary[activeIndex].definition }}</p>
+            <p class="whitespace-pre-wrap" :key="activeIndex">
+              {{ glossary[activeIndex].definition }}
+            </p>
           </div>
         </div>
       </div>

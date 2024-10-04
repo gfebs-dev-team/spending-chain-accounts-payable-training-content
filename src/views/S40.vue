@@ -1,17 +1,25 @@
 <script setup>
-import { SlideColumns } from '@/components/Slide'
-import { useSlidesStore } from '@/stores/slides'
-import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import { SlideQuestion, SlideQuestionInput } from '@/components/Slide'
+import { useSlidesStore } from '../stores/slides'
+import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Summary',
-  type: 'content',
-  section: 'Payment Program'
+  title: 'Question 12',
+  type: 'question',
+  section: 'Payment Program',
+  viewed: false,
+  answer: 'a',
+  user: ''
 }
 
 const slides = useSlidesStore()
 const { addSlide } = slides
+
+const answer = ref()
+const checked_el = ref(0)
+
+provide('answer', answer)
+provide('checked_el', checked_el)
 
 onBeforeMount(() => {
   addSlide(slideData, 39)
@@ -19,17 +27,15 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideColumns v-bind="slideData" :columns="1">
-    <p>This concludes the Payment Program section.</p>
-    <p>Now you should be able to perform the following:</p>
-    <ul class="pl-8 list-disc">
-      <li>Describe the Payment process</li>
-      <li>Describe the key steps involved in the Payment process</li>
-      <li>List the interfaces involved in the Payment process</li>
-      <li>List the roles necessary for the Payment process to occur</li>
-    </ul>
-    <template #column_2>
-      <img :src="chart" className="h-full p-12" />
+  <SlideQuestion :title="slideData.title">
+    <template #question>
+      What determines which disbursing system, ADS or DDS, should be used to process the payment?
     </template>
-  </SlideColumns>
+    <template #options>
+      <SlideQuestionInput value="a" label="The PMS field on the invoice" index="1" count="12" />
+      <SlideQuestionInput value="b" label="Vendors Name" index="2" count="12" />
+      <SlideQuestionInput value="c" label="Cost Object on the Invoice" index="3" count="12" />
+      <SlideQuestionInput value="d" label="None of the Above" index="4" count="12" />
+    </template>
+  </SlideQuestion>
 </template>

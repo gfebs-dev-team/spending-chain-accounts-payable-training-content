@@ -4,7 +4,7 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 9',
+  title: 'Question 8',
   type: 'question',
   section: 'Payment Program',
   viewed: false,
@@ -29,12 +29,12 @@ onBeforeMount(() => {
 <template>
   <SlideQuestion :title="slideData.title">
     <template #question>
-      The Automated Disbursing System (ADS) is an extemal payment system which interfaces with GFEBS
-      in the Payment Process:
+      During the Payment Run, the payment program is run separately for check and EFT payments and
+      generates multiple files.
     </template>
     <template #options>
-      <SlideQuestionInput value="true" label="True" index="1" count="9" />
-      <SlideQuestionInput value="false" label="False" index="2" count="9" />
+      <SlideQuestionInput value="true" label="True" index="1" count="8" />
+      <SlideQuestionInput value="false" label="False" index="2" count="8" />
     </template>
   </SlideQuestion>
 </template>

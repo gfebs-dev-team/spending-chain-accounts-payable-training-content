@@ -1,25 +1,17 @@
 <script setup>
-import { SlideQuestion, SlideQuestionInput } from '@/components/Slide'
-import { useSlidesStore } from '../stores/slides'
-import { onBeforeMount, provide, ref } from 'vue'
+import { SlideCheckpoint } from '@/components/Slide'
+import { useSlidesStore } from '@/stores/slides'
+import { onBeforeMount } from 'vue'
+import checkpoint from '@/assets/img/module_checkpoint.png'
 
 const slideData = {
-  title: 'Question 1',
-  type: 'question',
-  section: 'Invoicing Process',
-  viewed: false,
-  answer: 'true',
-  user: ''
+  title: 'Learning Checkpoint',
+  type: 'content',
+  section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()
 const { addSlide } = slides
-
-const answer = ref()
-const checked_el = ref(0)
-
-provide('answer', answer)
-provide('checked_el', checked_el)
 
 onBeforeMount(() => {
   addSlide(slideData, 17)
@@ -27,14 +19,12 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideQuestion :title="slideData.title">
-    <template #question
-      >A Miscellaneous Payment Invoice that is subject to the Prompt pay Act (PPA) is matched to a
-      Purchase Order and a Goods Receipt / Acceptance.</template
-    >
-    <template #options>
-      <SlideQuestionInput value="true" label="True" index="1" count="1" />
-      <SlideQuestionInput value="false" label="False" index="2" count="1" />
-    </template>
-  </SlideQuestion>
+  <SlideCheckpoint v-bind="slideData" :columns="1" :image="checkpoint">
+    <p>
+      Before we summarize the topics in the Invoicing section, it's important to check your
+      knowledge of the material covered. This is your opportunity to ensure you are understanding
+      the course material.
+    </p>
+    <p>Proceed to answer six questions to test your understanding of the material covered.</p>
+  </SlideCheckpoint>
 </template>

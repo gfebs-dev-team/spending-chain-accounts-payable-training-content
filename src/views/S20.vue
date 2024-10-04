@@ -4,11 +4,11 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 3',
+  title: 'Question 2',
   type: 'question',
   section: 'Invoicing Process',
   viewed: false,
-  answer: 'a',
+  answer: 'd',
   user: ''
 }
 
@@ -28,17 +28,29 @@ onBeforeMount(() => {
 
 <template>
   <SlideQuestion :title="slideData.title">
-    <template #question> Which of the following roles inputs the Misc. Pay Invoices? </template>
+    <template #question>
+      Which of the following is not a requirement for routing of a miscellaneous payment invoice:
+    </template>
     <template #options>
-      <SlideQuestionInput value="a" label="Site Invoice Processor" index="1" count="3" />
-      <SlideQuestionInput value="b" label="Payment Certifier" index="2" count="3" />
+      <SlideQuestionInput value="a" label=" Attach Support Documentation" index="1" count="2" />
+      <SlideQuestionInput
+        value="b"
+        label="Choosing the Correct Document type"
+        index="2"
+        count="2"
+      />
       <SlideQuestionInput
         value="c"
-        label="Payment Interface Processing Monitor"
+        label="Local Approval from the Misc Pay Approver"
         index="3"
-        count="3"
+        count="2"
       />
-      <SlideQuestionInput value="d" label="Payment Processor" index="4" count="3" />
+      <SlideQuestionInput
+        value="d"
+        label="DFAS Approval from the Misc Pay Approver"
+        index="4"
+        count="2"
+      />
     </template>
   </SlideQuestion>
 </template>

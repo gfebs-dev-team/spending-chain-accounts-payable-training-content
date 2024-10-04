@@ -4,11 +4,11 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 4',
+  title: 'Question 3',
   type: 'question',
   section: 'Invoicing Process',
   viewed: false,
-  answer: 'true',
+  answer: 'a',
   user: ''
 }
 
@@ -28,12 +28,17 @@ onBeforeMount(() => {
 
 <template>
   <SlideQuestion :title="slideData.title">
-    <template #question>
-      Supporting documentation is a requirement for routing of a miscellaneous payment invoice.
-    </template>
+    <template #question> Which of the following roles inputs the Misc. Pay Invoices? </template>
     <template #options>
-      <SlideQuestionInput value="true" label="True" index="1" count="4" />
-      <SlideQuestionInput value="false" label="False" index="2" count="4" />
+      <SlideQuestionInput value="a" label="Site Invoice Processor" index="1" count="3" />
+      <SlideQuestionInput value="b" label="Payment Certifier" index="2" count="3" />
+      <SlideQuestionInput
+        value="c"
+        label="Payment Interface Processing Monitor"
+        index="3"
+        count="3"
+      />
+      <SlideQuestionInput value="d" label="Payment Processor" index="4" count="3" />
     </template>
   </SlideQuestion>
 </template>

@@ -4,11 +4,11 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 5',
+  title: 'Question 4',
   type: 'question',
   section: 'Invoicing Process',
   viewed: false,
-  answer: 'a',
+  answer: 'true',
   user: ''
 }
 
@@ -29,18 +29,11 @@ onBeforeMount(() => {
 <template>
   <SlideQuestion :title="slideData.title">
     <template #question>
-      Who is responsible attaching supporting documentation to MISC Pay invoices using FB02?
+      Supporting documentation is a requirement for routing of a miscellaneous payment invoice.
     </template>
     <template #options>
-      <SlideQuestionInput value="a" label="Site Invoice Processor" index="1" count="5" />
-      <SlideQuestionInput
-        value="b"
-        label="Payment Interface Processing Monitor"
-        index="2"
-        count="5"
-      />
-      <SlideQuestionInput value="c" label="Payment Certifier" index="3" count="5" />
-      <SlideQuestionInput value="d" label="Invoice Processor" index="4" count="5" />
+      <SlideQuestionInput value="true" label="True" index="1" count="4" />
+      <SlideQuestionInput value="false" label="False" index="2" count="4" />
     </template>
   </SlideQuestion>
 </template>

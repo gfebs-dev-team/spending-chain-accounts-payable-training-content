@@ -1,18 +1,17 @@
 <script setup>
-import { SlideBase } from '@/components/Slide'
+import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
-import { onBeforeMount, ref } from 'vue'
-import target from '@/assets/img/target.svg'
+import { onBeforeMount } from 'vue'
+import chart from '@/assets/img/demonstration.svg'
 
 const slideData = {
-  title: 'Posting Misc. Payment Invoices (2 of 2)',
+  title: 'Posting Misc. Payment Invoices (1 of 2)',
   type: 'content',
   section: 'Invoicing Process'
 }
 
 const slides = useSlidesStore()
 const { addSlide } = slides
-const active = ref(-1)
 
 onBeforeMount(() => {
   addSlide(slideData, 11)
@@ -20,50 +19,29 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideBase v-bind="slideData" :classNames="{ main: 'items-center' }">
-    <template #main>
-      <p class="w-full">
-        <span class="font-bold">Click</span> on each button for requirements for Miscellaneous
-        Payment Invoices.
-      </p>
-
-      <div class="grid grid-cols-2 grid-rows-2 h-full gap-6 p-6 justify-items-center w-4/5">
-        <img
-          :src="target"
-          alt="PPA"
-          class="h-full"
-          @click="active = 0"
-          :class="active == 0 ? 'drop-shadow-md drop-shadow-masblue' : ''"
-        />
-        <img
-          :src="target"
-          alt="Non-PPA"
-          class="h-full"
-          @click="active = 1"
-          :class="active == 1 ? 'drop-shadow-md drop-shadow-masblue' : ''"
-        />
-        <div v-if="active > -1" class="bg-spacecadet mx-4 col-span-2 h-full w-full">
-          <div v-if="active == 0" class="flex flex-col gap-3 p-4">
-            <p class="font-bold">Misc Pays NOT subject to Prompt Payment require:</p>
-            <p>
-              Funds Commitment (FMZ) simultaneous commitment / obligation of funds FB60 = Invoice
-            </p>
-            <p>
-              The FMZ Doc Type is F9 Miscellaneous Obligation Document type. The invoice document
-              type is "MP Misc. Pay FM".
-            </p>
-          </div>
-          <div v-if="active == 1" class="flex flex-col gap-3 p-4">
-            <p class="font-bold">
-              Miscellaneous Payments subject to the Prompt Payment require the following:
-            </p>
-            <p>Misc Pay PR = Commitment of funds</p>
-            <p>Misc Pay PO = Obligation of Funds</p>
-            <p>MIGO = Goods Receipt I acceptance</p>
-            <p>MIRO = Invoice</p>
-          </div>
-        </div>
-      </div>
+  <SlideColumns v-bind="slideData" :columns="1">
+    <p>
+      The Site Invoice Processor should not process a Misc. Payment Invoice without supporting
+      documentation.
+    </p>
+    <p>
+      After creating the invoice, they must attach supporting documentation via FB02. This is true
+      regardless of the invoice type that was entered, whether it was an MIRO invoice for Misc Pay
+      subject to PPA or an FB60 for Misc Pay not subject to PPA. Only after the supporting
+      documentation is attached will the invoice route for approval.
+    </p>
+    <p>
+      It is of upmost importance that the correct document types are used to reflect a miscellaneous
+      payment. Using the wrong document type in any of the documents required will cause an issue
+      with routing.
+    </p>
+    <p>
+      Once supporting documentation is attached, the Misc. Pay Approver receives a notification
+      advising of their pending tasks. Upon review and approval, the Miscellaneous Payment will
+      route to DFAS for Payment Processing.
+    </p>
+    <template #column_2>
+      <img :src="chart" className="h-full p-12" />
     </template>
-  </SlideBase>
+  </SlideColumns>
 </template>

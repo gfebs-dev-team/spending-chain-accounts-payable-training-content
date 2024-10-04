@@ -5,7 +5,7 @@ import { onBeforeMount } from 'vue'
 import chart from '@/assets/img/demonstration.svg'
 
 const slideData = {
-  title: 'MIR4 Display Contract Invoice: Sim',
+  title: 'MIR4 Display Contract Invoice: Demo',
   type: 'content',
   section: 'Invoicing Process'
 }
@@ -21,14 +21,9 @@ onBeforeMount(() => {
 <template>
   <SlideColumns v-bind="slideData" :columns="1">
     <p>
-      Now is time to practice displaying a Contract Invoice in GFEBS. You have the opportunity to
-      practice tasks that you will perform in the GFEBS system by completing a scenario. When you
-      open the simulation, you will be provided with instructions to properly execute the
-      transaction.
+      The purpose of this demonstration is to display a contractual invoice in GFEBS. The simulated
+      environment provides an opportunity to view tasks that you will perform in GFEBS.
     </p>
-    <p><span class="bold">Role</span>: Site Invoice Processor, Invoice Processor</p>
-    <p><span class="bold">Scenario</span>: Display Contract Invoice</p>
-    <p><span class="bold">Transaction Code: MIR4</span></p>
     <p><span class="font-bold">Click</span> the icon on the right to begin.</p>
     <template #column_2>
       <a href=""><img :src="chart" className="h-full p-12" /></a>

@@ -4,11 +4,11 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 12',
+  title: 'Question 11',
   type: 'question',
   section: 'Payment Program',
   viewed: false,
-  answer: 'a',
+  answer: 'd',
   user: ''
 }
 
@@ -28,14 +28,17 @@ onBeforeMount(() => {
 
 <template>
   <SlideQuestion :title="slideData.title">
-    <template #question>
-      What determines which disbursing system, ADS or DDS, should be used to process the payment?
-    </template>
+    <template #question> Which role is the final authority when processing payments? </template>
     <template #options>
-      <SlideQuestionInput value="a" label="The PMS field on the invoice" index="1" count="12" />
-      <SlideQuestionInput value="b" label="Vendors Name" index="2" count="12" />
-      <SlideQuestionInput value="c" label="Cost Object on the Invoice" index="3" count="12" />
-      <SlideQuestionInput value="d" label="None of the Above" index="4" count="12" />
+      <SlideQuestionInput value="a" label="Payment Processor" index="1" count="11" />
+      <SlideQuestionInput value="b" label="Payment Close Processor" index="2" count="11" />
+      <SlideQuestionInput
+        value="c"
+        label="Payment Interface Processing Monitor"
+        index="3"
+        count="11"
+      />
+      <SlideQuestionInput value="d" label="Payment Certifier" index="4" count="11" />
     </template>
   </SlideQuestion>
 </template>

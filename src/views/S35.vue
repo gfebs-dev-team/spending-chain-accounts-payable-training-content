@@ -4,7 +4,7 @@ import { useSlidesStore } from '../stores/slides'
 import { onBeforeMount, provide, ref } from 'vue'
 
 const slideData = {
-  title: 'Question 8',
+  title: 'Question 7',
   type: 'question',
   section: 'Payment Program',
   viewed: false,
@@ -29,12 +29,12 @@ onBeforeMount(() => {
 <template>
   <SlideQuestion :title="slideData.title">
     <template #question>
-      During the Payment Run, the payment program is run separately for check and EFT payments and
-      generates multiple files.
+      Electronic Funds Transfer (EFT) information in the Vendor Master Data is updated via the
+      Corporate Electronic Funds Transfer (CEFT) interface prior to payment.
     </template>
     <template #options>
-      <SlideQuestionInput value="true" label="True" index="1" count="8" />
-      <SlideQuestionInput value="false" label="False" index="2" count="8" />
+      <SlideQuestionInput value="true" label="True" index="1" count="7" />
+      <SlideQuestionInput value="false" label="False" index="2" count="7" />
     </template>
   </SlideQuestion>
 </template>
