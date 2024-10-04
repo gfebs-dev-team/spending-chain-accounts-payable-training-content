@@ -35,7 +35,7 @@ onBeforeMount(() => {
       Invoice Processor at DFAS.
     </p>
     <template #column_2>
-      <img :src="target" alt="target" />
+      <img :src="target" alt="target" class="p-8" />
     </template>
   </SlideColumns>
 </template>
