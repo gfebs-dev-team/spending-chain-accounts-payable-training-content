@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import chart from '@/assets/img/accounts15.svg'
 
 const slideData = {
   title: 'Review',
@@ -46,7 +46,7 @@ onBeforeMount(() => {
       below) to review the lesson's content.
     </p>
     <template #column_2>
-      <img :src="chart" className="h-full p-12" />
+      <img :src="chart" className="p-12" />
     </template>
   </SlideColumns>
 </template>

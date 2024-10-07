@@ -29,7 +29,7 @@ onBeforeMount(() => {
       Pre-Validation Module (APVM) and the Pay Pre-Validation Module (PPVM).
     </p>
     <template #column_2>
-      <img :src="chart" className="h-full px-12" />
+      <img :src="chart" className="px-12" />
     </template>
   </SlideColumns>
 </template>

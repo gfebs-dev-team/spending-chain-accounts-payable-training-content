@@ -1,5 +1,6 @@
 <script setup>
 import { SlideColumns } from '@/components/Slide'
+import AppButton from '@/components/AppButton.vue'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
 import chart from '@/assets/img/demonstration.svg'
@@ -38,7 +39,8 @@ onBeforeMount(() => {
       step by step process on researching these payments.
     </p>
     <template #column_2>
-      <img :src="chart" className="h-full p-12" />
+      <img :src="chart" className="p-12" />
+      <AppButton class="h-min">Support Document</AppButton>
     </template>
   </SlideColumns>
 </template>
