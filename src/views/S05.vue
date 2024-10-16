@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import target from '@/assets/img/accounts4.svg'
+import target from '@/assets/accounts4.svg'
 
 const slideData = {
   title: 'Types of Invoices',

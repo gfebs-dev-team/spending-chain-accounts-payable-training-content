@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import image from '@/assets/img/demonstration.svg'
+import image from '@/assets/demonstration.svg'
 
 const slideData = {
   title: 'MIR4 Display Contract Invoice: Demo',

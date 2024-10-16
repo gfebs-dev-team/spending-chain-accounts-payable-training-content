@@ -2,7 +2,7 @@
 import { onBeforeMount } from 'vue'
 import { useSlidesStore } from '@/stores/slides'
 import { SlideTerms } from '@/components/Slide'
-import invoiceProcessor from '@/assets/img/accounts3.svg'
+import invoiceProcessor from '@/assets/accounts3.svg'
 
 const slideData = {
   title: 'Invoicing Roles in GFEBS',

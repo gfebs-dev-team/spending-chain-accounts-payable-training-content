@@ -2,7 +2,7 @@
 import { SlideCheckpoint } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import checkpoint from '@/assets/img/checkpoint.svg'
+import checkpoint from '@/assets/checkpoint.svg'
 
 const slideData = {
   title: 'Learning Checkpoint',

@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/accounts15.svg'
+import chart from '@/assets/accounts15.svg'
 
 const slideData = {
   title: 'Review',

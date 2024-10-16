@@ -3,7 +3,7 @@ import { SlideColumns } from '@/components/Slide'
 import AppButton from '@/components/AppButton.vue'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import chart from '@/assets/demonstration.svg'
 
 const slideData = {
   title: 'Treasury Payment',

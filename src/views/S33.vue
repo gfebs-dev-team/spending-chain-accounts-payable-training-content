@@ -2,7 +2,7 @@
 import { SlideTerms } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/img/demonstration.svg'
+import chart from '@/assets/demonstration.svg'
 
 const slideData = {
   title: 'Payment Process Flow',
