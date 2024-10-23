@@ -40,7 +40,7 @@ onBeforeMount(() => {
     </p>
     <template #column_2>
       <img :src="chart" className="p-12" />
-      <AppButton class="h-min">Support Document</AppButton>
+      <AppButton class="h-min bg-spacecadet border-none w-4/5 mx-auto">Support Document</AppButton>
     </template>
   </SlideColumns>
 </template>

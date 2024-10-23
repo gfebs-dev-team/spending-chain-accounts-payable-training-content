@@ -19,7 +19,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  <SlideTerms v-bind="slideData" :termsNum="3">
+  <SlideTerms v-bind="slideData" :termsNum="3" :reverse="true">
     <template #main-text>
       <p class="font-bold">The roles involved in the Invoicing Process section are:</p>
       <ul class="list-disc flex flex-col pl-12 gap-3">
@@ -31,10 +31,8 @@ onBeforeMount(() => {
         <span class="font-bold">Click</span> on each role to learn more about the responsibilities
         for each role involved in the Invoicing Activity
       </p>
-
-      <img :src="invoiceProcessor" alt="Invoice Processor" class="w-2/3 p-4 mx-auto" />
     </template>
-
+    <img :src="invoiceProcessor" alt="Invoice Processor" class="h-2/5 px-4 mx-auto" />
     <template #termButton_1>Site Invoice Processor</template>
     <template #termDef_1>
       The <span class="font-bold">Site Invoice Processor</span> receives, verifies and creates
