@@ -2,7 +2,7 @@
 import { SlideColumns } from '@/components/Slide'
 import { useSlidesStore } from '@/stores/slides'
 import { onBeforeMount } from 'vue'
-import chart from '@/assets/accounts1.svg'
+import chart from '@/assets/spendingchain.svg'
 
 const slideData = {
   title: 'Welcome to Payment Program',

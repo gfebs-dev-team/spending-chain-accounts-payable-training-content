@@ -17,6 +17,10 @@ const { addSlide } = slides
 onBeforeMount(() => {
   addSlide(slideData, 31)
 })
+
+function newTab(url) {
+  window.open(url, '_blank')
+}
 </script>
 
 <template>
@@ -40,7 +44,11 @@ onBeforeMount(() => {
     </p>
     <template #column_2>
       <img :src="chart" className="p-12" />
-      <AppButton class="h-min bg-spacecadet border-none w-4/5 mx-auto">Support Document</AppButton>
+      <AppButton
+        class="h-min bg-spacecadet border-none w-4/5 max-h-12 mx-auto"
+        @click="newTab('/formTemp.pdf')"
+        >Support Document</AppButton
+      >
     </template>
   </SlideColumns>
 </template>
