@@ -43,7 +43,7 @@ function newTab(url) {
       step by step process on researching these payments.
     </p>
     <template #column_2>
-      <img :src="chart" className="p-12" />
+      <img :src="chart" class="h-3/4 md:p-8 md:pt-0 object-contain" />
       <AppButton
         class="h-min bg-spacecadet border-none w-4/5 max-h-12 mx-auto"
         @click="newTab('/formTemp.pdf')"

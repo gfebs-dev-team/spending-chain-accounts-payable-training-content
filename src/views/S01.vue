@@ -33,7 +33,7 @@ onBeforeMount(() => {
     </ul>
     <p>We will start by learning about Invoicing and the roles required in the process.</p>
     <template #column_2>
-      <img :src="image" className="self-start px-12" />
+      <img :src="image" class="h-3/4 md:p-8 md:pt-0 object-contain" />
     </template>
   </SlideColumns>
 </template>

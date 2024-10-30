@@ -41,7 +41,7 @@ onBeforeMount(() => {
       route to DFAS for Payment Processing.
     </p>
     <template #column_2>
-      <img :src="chart" className="self-start px-4" />
+      <img :src="chart" class="h-3/4 md:p-8 md:pt-0 object-contain" />
     </template>
   </SlideColumns>
 </template>

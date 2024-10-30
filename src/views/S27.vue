@@ -30,7 +30,7 @@ onBeforeMount(() => {
       <li>Payment Program Process Flow</li>
     </ul>
     <template #column_2>
-      <img :src="chart" className="px-12" />
+      <img :src="chart" class="h-3/4 md:p-8 md:pt-0 object-contain" />
     </template>
   </SlideColumns>
 </template>

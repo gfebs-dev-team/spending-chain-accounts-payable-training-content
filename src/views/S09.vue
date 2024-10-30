@@ -26,7 +26,7 @@ onBeforeMount(() => {
     </p>
     <p><span class="font-bold">Click</span> the icon on the right to begin.</p>
     <template #column_2>
-      <a href="#"><img :src="image" className="h-full px-12" /></a>
+      <a href="#"><img :src="image" class="h-3/4 md:p-8 md:pt-0 object-contain mx-auto" /></a>
     </template>
   </SlideColumns>
 </template>
