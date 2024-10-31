@@ -29,7 +29,7 @@ onBeforeMount(() => {
       <li>List the roles necessary for the Payment process to occur</li>
     </ul>
     <template #column_2>
-      <img :src="chart" class="h-3/4 md:p-8 md:pt-0 object-contain" />
+      <img :src="chart" class="slideImg" />
     </template>
   </SlideColumns>
 </template>

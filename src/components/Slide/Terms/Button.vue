@@ -2,7 +2,7 @@
 import { twMerge } from 'tailwind-merge'
 import { ref } from 'vue'
 import { RiCheckLine } from '@remixicon/vue'
-const props = defineProps(['index', 'currIndex'])
+const props = defineProps(['index', 'currIndex', 'className'])
 defineEmits(['setTerm'])
 const viewed = ref(false)
 </script>
@@ -13,14 +13,19 @@ const viewed = ref(false)
     :id="'term_' + index"
     :class="
       twMerge(
-        'relative flex items-center justify-center outline-none p-4 min-w-0 min-h-0 rounded-md text-balance text-xs sm:text-base cursor-pointer border-2 border-transparent hover:bg-transparent hover:border-saffron hover:text-aliceblue bg-spacecadet text-aliceblue font-bold transition-all',
-        currIndex === index ? 'bg-saffron text-spacecadet' : ''
+        twMerge(
+          'relative flex items-center justify-center outline-none p-4  pr-10 text-balance min-w-0 min-h-0 rounded-md text-xs sm:text-base cursor-pointer border-2 border-transparent hover:bg-transparent hover:border-saffron hover:text-aliceblue bg-spacecadet text-aliceblue font-bold transition-all',
+          currIndex === index
+            ? 'bg-saffron text-spacecadet hover:bg-inherit hover:text-inherit'
+            : ''
+        ),
+        className
       )
     "
   >
     <slot name="term" />
     <span
-      class="absolute right-4"
+      class="absolute right-2"
       :class="`${viewed ? 'inline-block' : 'hidden'}`"
       :data-viewed="viewed"
       ><RiCheckLine

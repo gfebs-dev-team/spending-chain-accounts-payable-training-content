@@ -26,7 +26,11 @@ onBeforeMount(() => {
     </p>
     <p><span class="font-bold">Click</span> the icon on the right to begin.</p>
     <template #column_2>
-      <a href="#"><img :src="image" class="h-3/4 md:p-8 md:pt-0 object-contain mx-auto" /></a>
+      <a
+        href="https://ssilrc.army.mil/resources/FMS/GFEBS/SpendingChain/6AccountsPayable/html/01_AP_MIR4DisplayContractInvoice_Demo/index.html"
+        target="_blank"
+        ><img :src="image" class="slideImg mx-auto"
+      /></a>
     </template>
   </SlideColumns>
 </template>

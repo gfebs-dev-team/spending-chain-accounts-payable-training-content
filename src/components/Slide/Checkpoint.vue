@@ -1,6 +1,6 @@
 <script setup>
 import SlideColumns from './Columns.vue'
-import image from '@/assets/checkpoint.svg'
+import image from './assets/checkpoint.svg'
 defineProps(['slideData', 'image'])
 </script>
 <template>

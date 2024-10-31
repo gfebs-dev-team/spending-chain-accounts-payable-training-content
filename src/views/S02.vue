@@ -28,7 +28,7 @@ onBeforeMount(() => {
       <li>Summarize the procedures for processing blocked invoices</li>
     </ul>
     <template #column_2>
-      <img :src="target" alt="target" class="h-3/4 md:p-8 md:pt-0 object-contain" />
+      <img :src="target" alt="target" class="slideImg" />
     </template>
   </SlideColumns>
 </template>

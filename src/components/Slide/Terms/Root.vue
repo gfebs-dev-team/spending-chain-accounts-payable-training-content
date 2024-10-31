@@ -81,31 +81,28 @@ function setTerm(index) {
           </template>
         </div>
 
-        <div class="flex flex-col gap-2 min-h-0">
-          <slot />
-          <div
-            class="rounded-md bg-spacecadet p-4 h-auto overflow-auto max-h-full w-full relative"
-            v-if="currIndex && reverse"
-          >
-            <template v-for="index in termsNum" :key="index">
-              <Transition
-                name="fade"
-                enter-active-class="transition-opacity duration-500 ease-in-out"
-                leave-active-class="transition-opacity duration-500 ease-in-out"
-                enter-from-class="absolute  opacity-0 inset-0 p-4"
-                leave-to-class="absolute opacity-0 inset-0 p-4"
-              >
-                <div class="flex flex-col gap-2" v-if="index === currIndex">
-                  <h3 class="text-saffron font-bold text-lg">
-                    <slot :name="'termButton_' + index" />
-                  </h3>
-                  <p class="overflow-auto">
-                    <slot :name="'termDef_' + index" />
-                  </p>
-                </div>
-              </Transition>
-            </template>
-          </div>
+        <div
+          class="rounded-md bg-spacecadet p-4 h-auto overflow-auto max-h-full w-full relative"
+          v-if="currIndex && reverse"
+        >
+          <template v-for="index in termsNum" :key="index">
+            <Transition
+              name="fade"
+              enter-active-class="transition-opacity duration-500 ease-in-out"
+              leave-active-class="transition-opacity duration-500 ease-in-out"
+              enter-from-class="absolute  opacity-0 inset-0 p-4"
+              leave-to-class="absolute opacity-0 inset-0 p-4"
+            >
+              <div class="flex flex-col gap-2" v-if="index === currIndex">
+                <h3 class="text-saffron font-bold text-lg">
+                  <slot :name="'termButton_' + index" />
+                </h3>
+                <p class="overflow-auto">
+                  <slot :name="'termDef_' + index" />
+                </p>
+              </div>
+            </Transition>
+          </template>
         </div>
       </div>
     </template>

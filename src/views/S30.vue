@@ -35,7 +35,7 @@ onBeforeMount(() => {
       documents.
     </p>
     <template #column_2>
-      <img :src="chart" class="h-3/4 md:p-8 md:pt-0 object-contain" />
+      <img :src="chart" class="slideImg" />
     </template>
   </SlideColumns>
 </template>

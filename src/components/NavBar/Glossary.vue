@@ -52,7 +52,7 @@ function setTerm(index) {
   >
     <!-- GLOSSARY -->
     <div
-      class="h-full w-full flex flex-col bg-delftblue rounded p-4 gap-4 auto-rows-max lg:max-w-[1000px] lg:max-h-[800px]"
+      class="relative h-full w-full flex flex-col bg-delftblue rounded p-4 gap-4 auto-rows-max lg:max-w-[1000px] lg:max-h-[800px]"
     >
       <!-- HEADING -->
       <h2 class="font-bold text-xl">Glossary</h2>
@@ -60,7 +60,7 @@ function setTerm(index) {
       <!-- CLOSE -->
       <RiCloseLine
         @click="glossaryState = false"
-        class="fill-saffron absolute right-4 top-4 col-start-2 justify-self-end"
+        class="fill-saffron absolute right-4 top-4 col-start-2 justify-self-end cursor-pointer"
       />
 
       <div class="flex flex-col gap-4 justify-between md:flex-row">
